@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: #042c74;
+    height: 100vh;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/*ESTILO NAVBAR*/
+
+header {
+    padding: 20px 4%;
+}
+
+header>.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu1 a:hover {
+    color: #fad312;
+    transform: scale(1.25);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu1 ul li {
+    display: inline-block;
+    padding: 5px 40px;
+}
+
+header .btn-contato button {
+    padding: 15px;
+    font-size: 14px;
+    font-weight:  550;
+    background-color: #fad312;
+    border: 0;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+
+/* ESTILO PRINCIPAL*/
+
+.section.principal {
+    padding: 40px 4%;
+}
+
+section.principal .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.principal h1 {
+    color: white;
+    font-size: 50px;
+    margin: 0 40px;
+    padding-top: 40px;
+
+}
+
+.principal h2{
+    color:#fad312;
+    margin: 0 40px;
+}
+
+.principal .txt-principal-esquerdo p {
+    line-height: 20px;
+    color: #fff;
+    margin: 40px 40px;
+    gap: 50px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.principal .img-direita img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
