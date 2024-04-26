@@ -10,7 +10,7 @@ body{
     height: 100vh;
 }
 
-.container{
+.interface{
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -32,36 +32,41 @@ body{
 /*ESTILO NAVBAR*/
 
 header {
-    padding: 20px 4%;
-}
-
-header>.container {
+    padding: 40px 4%;
+  }
+  
+  header>.interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-header a {
-    color: white;
+  }
+  
+  header a {
+    color: #ffffff;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
-    font-size: 20px;
-}
-
-header nav.menu1 a:hover {
+    font-size: 15px;
+  }
+  
+  header nav.menu-desktop a:hover {
     color: #fad312;
-    transform: scale(1.25);
-}
-
-header nav ul {
+    transform: scale(1.05);
+  }
+  
+  header nav ul {
     list-style-type: none;
-}
-
-header nav.menu1 ul li {
+  }
+  
+  header nav.menu-desktop ul li {
     display: inline-block;
-    padding: 5px 40px;
-}
+    padding: 0 40px;
+  }
+
+  header nav.menu-desktop ul li .menu-letras{
+    font-size: 19px;
+  }
+
 
 header .btn-contato button {
     padding: 15px;
@@ -78,106 +83,153 @@ header .btn-contato button i {
     font-size: 25px;
 }
 
+/*ESTILO MENU MOBILE*/
 
-/* ESTILO PRINCIPAL*/
-
-.section.principal {
-    padding: 40px 4%;
+.btn-abrir-menu i {
+    color: #fad312;
+    font-size: 40px ;
 }
 
-section.principal .flex {
-    align-items: center;
-    justify-content: center;
-    gap: 90px;
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
-.principal h1 {
-    color: white;
-    font-size: 50px;
-    margin: 0 40px;
-    padding-top: 40px;
-
+.menu-mobile.abrir-menu{
+    width: 70%;
 }
 
-.principal h2{
-    color:#fad312;
-    margin: 0 40px;
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
 }
 
-.principal .txt-principal-esquerdo p {
-    line-height: 20px;
+.menu-mobile .btn-fechar {
+   padding: 15px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #fad312;
+    font-size: 28px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
     color: #fff;
-    margin: 40px 40px;
-    gap: 50px;
-    text-align: justify;
     font-size: 20px;
+    font-weight: 300;
+    padding: 15px 8%;
+    display: block;
 }
 
-.principal .img-direita img {
-    width: 500px;
+.menu-mobile nav ul li a:hover{
+    background-color: #fad312;
+    color: #000;
 }
+
+.overlay-menu{
+    background-color: #000000a7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+
+/*SOBRE*/
+
+section.sobre {
+    padding: 80px 4%;
+  }
+  
+  section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .sobre .txt-sobre {
+    color: #fff;
+  }
+  
+  .sobre .txt-sobre h3 {
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    color: #fad312;
+  }
+  
+  .sobre .txt-sobre h1 {
+    color: #fff;
+    display: block;
+    font-size: 40px;
+  }
+  
+  .sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 18px;
+  }
+  
 
 /*ESPECIALIDADES*/
 
-section.especialidades h2{
-    color: #fad312;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-section.especialidades h3{
+/* ESTILO DAS SERVIÇOS */
+section.serviços {
+    padding: 40px 4%;
+    display: flex;
+   
+  }
+  
+  section.serviços .flex {
+    gap: 80px;
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .serviços .serviços-box {
     color: #fff;
-    text-align: center;
-}
-
-section.especialidades .serv{
-    color: white;
-    text-align: center;
-    
-}
-
-.box {
-    text-align: center;
-    font-size: 20px;
-}
-
-section.especialidades {
-    padding: 40px 2%;
-}
-
-section.especialidades .flex  {
-   flex-wrap: wrap;
-   justify-content: space-between;
-   gap:20px;
-   margin-top: 30px;
-}
-
-.especialidades .especialidades-box {
-    color: #fff;
-    padding: 25px;
-    border-radius: 10px;
+    padding: 80px;
+    border-radius: 20px;
+    margin-top: 45px;
     transition: .2s;
-    width: calc(50% - 20px);
-    margin-top: 20px; 
-    cursor: pointer;
-}
-
-.especialidades .especialidades-box:hover {
+    flex: 1; 
+  }
+  
+  .serviços .serviços-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #ffffff;
-}
-
-.especialidades .especialidades-box i {
-    font-size: 50px;
+    box-shadow: 0 0 20px #ffffff78;
+  }
+  
+  .serviços .serviços-box i {
+    font-size: 70px;
     color: #fad312;
-}
-
-.especialidades .especialidades-box h3 {
-    font-size: 20px;
+  }
+  
+  .serviços .serviços-box h3 {
+    font-size: 28px;
     margin: 15px 0;
-}
-
-
+  }
+  
+  .serviços h3{
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+  }
 /*NOSSOS MÉDICOS*/
 
 
@@ -264,7 +316,7 @@ section.medicos .overlay  i{
 /*FORMULARIO*/
 
 #appointment {
-    .container {
+    .interface {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 6%;
@@ -274,13 +326,13 @@ section.medicos .overlay  i{
         h2{
             color:#fff;
             font-size: 30px;
-            margin-top: 50px;
+            margin-top: 100px;
         }
 
         p {
             margin: 0.5rem 0 2rem;
             color:#fff;
-
+            margin-top: 10px;
         }
 
         article {
@@ -289,7 +341,9 @@ section.medicos .overlay  i{
             margin-bottom: 1.5rem;
             font-size: 25px;
             color:#fff;
-
+            margin: 60px 0px;
+            padding-right: 30px;
+        
             small{
                 margin-top: 0.4rem;
                 display: block;
@@ -304,7 +358,7 @@ section.medicos .overlay  i{
         display: flex;
         flex-direction: column;
         gap: 20px;
-        margin-top: 40px;
+        margin-top: 100px;
     }
     
     form input,
@@ -313,7 +367,7 @@ section.medicos .overlay  i{
         background-color: #00000065;
         border: 0;
         outline: 0;
-        padding: 30px 20px;
+        padding: 30px 30px;
         border-radius: 30px;
         color: #fff;
         font-size: 24px;
@@ -333,7 +387,7 @@ section.medicos .overlay  i{
     form .btn-enviar {
         margin-top: 20px;
         text-align: center;
-        color: #0000;
+        color: #00000000;
     }
     
     
@@ -355,6 +409,7 @@ section.medicos .overlay  i{
     grid-template-columns: repeat(auto-fit, minmax(27rem, 2fr));
     gap: 2rem;
     padding-top: 50px;
+    margin: 0 40px;
 }
 .review .box-container .box{
     border:var(--border);
@@ -400,22 +455,6 @@ section.medicos .overlay  i{
     padding-top: 70px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*footer*/
 
 footer {
@@ -444,6 +483,7 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin: 0 80px;
 
            
             .contact__items{
@@ -469,7 +509,8 @@ footer {
             flex-direction: row;
             align-items: center;
             text-align: center;
-            gap: 1rem
+            gap: 1rem;
+            padding-left: 135px;
         }
 
         .endereço i {
@@ -494,4 +535,342 @@ footer {
         border-top: 1px solid  ;
         color: rgba(255, 255, 255, 0.562);
         }
+}
+
+
+
+
+@media screen  and (max-width:1700px){
+  
+    /* CLASSES GERAIS */
+    .flex {
+     flex-direction: column;
+   }
+   
+   .topo-do-site .flex{
+     flex-direction: column-reverse;
+   }
+   
+   h2.titulo {
+     font-size: 34px;
+     line-height: 30px;
+   }
+   
+     /* CABEÇALHO */
+     .menu-desktop,
+     .btn-contato {
+         display: none;
+     }
+   
+   /* ESPECIALIDADES */
+   section.serviços {
+     padding: 40px 8%;
+     font-size: 20px;
+     flex-direction: column;
+     padding-left: 50px;
+   }
+   
+   /* SOBRE */
+   section.sobre {
+     padding: 80px 8%;
+   }
+   
+   .sobre .txt-sobre h2 {
+     font-size: 34px;
+     line-height: 35px;
+     text-align: center;
+   }
+   
+   
+   .img-sobre img{
+     width: 100%;
+   }
+   
+   /* MÉDICOS */
+   section.medicos {
+     padding: 80px 4%;
+   }
+   
+   .img-med {
+     width: 100%;
+     max-width: 360px;
+     margin: 0 auto;
+   }
+   
+   section.medicos .flex {
+    gap: 60px;
+   }
+
+   /*FORMULARIO*/
+
+   #appointment {
+    .interface {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin: auto;
+
+        .info {
+            text-align: center; 
+
+            h2 {
+                font-size: 25px;
+                margin-top: 50px; 
+            }
+
+            p {
+                margin-top: 10px;
+            }
+
+            article {
+                flex-direction: column; 
+                align-items: center; 
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                font-size: 20px;
+                margin: 30px 0px; 
+                
+                small {
+                    margin-top: 0.4rem;
+                    display: block;
+                }
+            }
+        }
+
+        form {
+            width: 90%; 
+            max-width: 800px;
+            gap: 20px;
+            margin-top: 50px; 
+        }
+
+        
+        #appointment .interface .form .btn-enviar {
+            text-align: center;
+            color: #0000;
+        }
+
+        form .btn-enviar input {
+            width: 300px;
+            background-color: #fad312;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 1s;
+        }
+    }
+}
+
+
+/*AVALIAÇÕES*/
+
+.review .box-container{
+  margin: 0 30px;
+}
+
+
+   
+   /* RODAPÉ */
+   footer {
+     padding-top: 2rem;
+     margin-top: 2rem;
+   
+     .container{
+         display: grid;
+         grid-template-columns: repeat(1, 1fr);
+        
+      
+         
+         .contact{
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+   
+            
+             .contact__items{
+                 flex-direction: column;
+                 align-items: center;
+                 
+             }
+   
+         }
+         .endereço{
+           align-items: center;
+            justify-content: center;
+    
+         }
+         .footer__socials{
+           align-items: center;
+            
+         }
+     }
+   }
+
+
+
+}
+
+@media screen  and (max-width:400px){
+   /* CLASSES GERAIS */
+   .flex {
+    flex-direction: column;
+  }
+  
+  .topo-do-site .flex{
+    flex-direction: column-reverse;
+  }
+  
+  h2.titulo {
+    font-size: 34px;
+    line-height: 30px;
+  }
+  
+    /* CABEÇALHO */
+    .menu-desktop,
+    .btn-contato {
+        display: none;
+    }
+  
+  /* ESPECIALIDADES */
+  section.serviços {
+    padding: 40px 8%;
+    font-size: 20px;
+    flex-direction: column;
+    padding-left: 50px;
+  }
+  
+  /* SOBRE */
+  section.sobre {
+    padding: 80px 8%;
+  }
+  
+  .sobre .txt-sobre h2 {
+    font-size: 34px;
+    line-height: 35px;
+    text-align: center;
+  }
+  
+  
+  .img-sobre img{
+    width: 100%;
+  }
+  
+  /* MÉDICOS */
+  section.medicos {
+    padding: 80px 4%;
+  }
+  
+  .img-med {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  
+  section.medicos .flex {
+   gap: 60px;
+  }
+
+  /*FORMULARIO*/
+
+  #appointment {
+   .interface {
+       display: flex;
+       flex-direction: column; 
+       align-items: center; 
+       margin: auto;
+
+       .info {
+           text-align: center; 
+
+           h2 {
+               font-size: 25px;
+               margin-top: 50px; 
+           }
+
+           p {
+               margin-top: 10px;
+           }
+
+           article {
+               flex-direction: column; 
+               align-items: center; 
+               gap: 1rem;
+               margin-bottom: 1.5rem;
+               font-size: 20px;
+               margin: 30px 0px; 
+               
+               small {
+                   margin-top: 0.4rem;
+                   display: block;
+               }
+           }
+       }
+
+       form {
+           width: 90%; 
+           max-width: 800px;
+           gap: 20px;
+           margin-top: 50px; 
+       }
+
+       
+       #appointment .interface .form .btn-enviar {
+           text-align: center;
+           color: #0000;
+       }
+
+       form .btn-enviar input {
+           width: 300px;
+           background-color: #fad312;
+           font-weight: 800;
+           cursor: pointer;
+           transition: 1s;
+       }
+   }
+}
+
+
+/*AVALIAÇÕES*/
+
+.review .box-container{
+ margin: 0 30px;
+}
+
+
+  
+  /* RODAPÉ */
+  footer {
+    padding-top: 2rem;
+    margin-top: 2rem;
+  
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+       
+     
+        
+        .contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+  
+           
+            .contact__items{
+                flex-direction: column;
+                align-items: center;
+                
+            }
+  
+        }
+        .endereço{
+          align-items: center;
+           justify-content: center;
+   
+        }
+        .footer__socials{
+          align-items: center;
+           
+        }
+    }
+  }
+
 }

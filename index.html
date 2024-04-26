@@ -22,7 +22,7 @@
     <!--icons-->
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 
 
@@ -30,125 +30,127 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="interface">
             <div class="logo">
                 <a href="#">
-                    <img src="/imagens/logo-clinica.png" style="width: 280px;" alt="logo">
+                    <img src="imagens/logo-clinica.png" alt="Logo" style="width: 280px;">
                 </a>
-            </div> <!--logo-->
+            </div><!--logo-->
 
-
-            <nav class="menu1">
+            <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Exames</a></li>
-                    <li><a href="#">Sou Paciente</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Contatos</a></li>
+                    <li><a href="#" class="menu-letras">Exames</a></li>
+                    <li><a href="#" class="menu-letras">Sou Paciente</a></li>
+                    <li><a href="#serv" class="menu-letras">Serviços</a></li>
+                    <li><a href="#cntt" class="menu-letras">Contatos</a></li>
                 </ul>
-            </nav> <!--menu principal-->
+            </nav>
+
             <div class="btn-contato">
-                <a href="#" target="_blank"><button><i class='bx bxl-whatsapp' class="imgwpp"></i>Agende sua
-                        consulta</button></a>
-            </div><!--butão consulta-->
-        </div><!--container-->
+                <div class="btn-contato">
+                    <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank"><button><i class='bx bxl-whatsapp' class="imgwpp"></i>Agende sua
+                            consulta</button></a>
+                </div><!--butão consulta-->
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Exames</a></li>
+                        <li><a href="#">Sou Paciente</a></li>
+                        <li><a href="#serv">Serviços</a></li>
+                        <li><a href="#cntt">Contatos</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank">Agende sua Consulta</a></li>
+                    </ul>
+                </nav>
+
+            </div> <!--menu-mobile-->
+
+            <div class="overlay-menu" id="overlay-menu"></div>
+
+
+
+        </div><!--interface-->
     </header>
 
     <main>
-        <section class="principal">
+        <section class="sobre">
             <div class="interface">
                 <div class="flex">
-                    <div class="txt-principal-esquerdo">
-                        <h1>Sobre</h1>
+                    <div class="img-sobre">
+                        <img src="imagens/imgheader.jpg" alt="">
+                    </div><!--img-sobre-->
+
+                    <div class="txt-sobre">
+                        <h1>Sobre :</h1>
                         <br>
-                        <h2>Este é um resumo sobre nós</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet. Sed omnis harum aut consequuntur quibusdam et cumque odio rem
-                            quia fugit qui voluptatem totam! Eum pariatur nemo quo repudiandae ipsa non molestiae
-                            tenetur est perferendis voluptates a magni obcaecati ut vitae fuga in odio suscipit.
-                            Aut possimus rerum qui quaerat iusto eum exercitationem reiciendis rem distinctio magni et
-                            laborum galisum rem fuga galisum et assumenda modi.
-                        </p>
-                        <p>
-                            Et perspiciatis dolorem id doloribus
-                            itaque ut neque nesciunt nam omnis odit. Cum temporibus recusandae sit galisum velit eos
-                            enim eius. Est omnis labore ea repellat dolorem eum galisum omnis sed delectus amet et
-                            commodi molestiae et quia itaque aut consectetur odio. Et perspiciatis dolorem id doloribus
-                            itaque ut neque nesciunt nam omnis odit. Cum temporibus recusandae sit galisum velit eos
-                            enim eius. Est omnis labore ea repellat dolorem eum galisum omnis sed delectus amet et
-                            commodi molestiae et quia itaque aut consectetur odio.
-                        </p>
-                        <p>
-                            Et perspiciatis dolorem id doloribus
-                            itaque ut neque nesciunt nam omnis odit. Cum temporibus recusandae sit galisum velit eos
-                            enim eius. Est omnis labore ea repellat dolorem eum galisum omnis sed delectus amet et
-                            commodi molestiae et quia itaque aut consectetur odio. Et perspiciatis dolorem id doloribus
-                            itaque ut neque nesciunt nam omnis odit. Cum temporibus recusandae sit galisum velit eos
-                            enim eius. Est omnis labore ea repellat dolorem eum galisum omnis sed delectus amet et
-                            commodi molestiae et quia itaque aut consectetur odio.
-                        </p>
-                    </div> <!--principal esq-->
-
-                    <div class="img-direita">
-                        <img src="/imagens/imgheader.jpg" alt="Foto Dr.roberto">
-                    </div><!--img direita-->
-
+                        <h3 >Este é um resumo sobre nós </h3>
+                        <br>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At accusantium ducimus dicta suscipit, neque cumque sunt tenetur totam delectus magnam minus ratione. Quidem sequi velit voluptatibus eos omnis ullam officiis.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quidem quae iusto repellendus eaque, ipsum sed voluptate explicabo voluptas, dolorum porro sequi laudantium? Obcaecati quae, dolores illo officiis a numquam.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quidem quae iusto repellendus eaque, ipsum sed voluptate explicabo voluptas, dolorum porro sequi laudantium? Obcaecati quae, dolores illo officiis a numquam.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quidem quae iusto repellendus eaque, ipsum sed voluptate explicabo voluptas, dolorum porro sequi laudantium? Obcaecati quae, dolores illo officiis a numquam.</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quidem quae iusto repellendus eaque, ipsum sed voluptate explicabo voluptas, dolorum porro sequi laudantium? Obcaecati quae, dolores illo officiis a numquam.</p>
+    
+                    </div><!--txt-sobre-->
                 </div><!--flex-->
-            </div> <!--interface-->
+            </div><!--interface-->
+        </section><!--sobre-->  
 
-        </section> <!--principal-->
-
-        <section class="especialidades">
+        <section class="serviços" id="serv">
             <div class="interface">
-                <h2 class="titulo">NOSSOS SERVIÇOS</h2>
-                <h3 class="serv">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-
+                <h2 class="titulo">Nossos Serviços</h2>
+                <br>
+                <h3 >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam quidem quae iusto repellendus eaque, ipsum sed voluptate explicabo voluptas, dolorum porro sequi laudantium? Obcaecati quae, dolores illo officiis a numquam.</h3>
                 <div class="flex">
-                    <div class="especialidades-box">
-                        <i class='bx bxs-book-content'></i>
-                        <h3>Exames</h3>
-                        <p class="box">Lorem ipsum dolor sit amet. Sed omnis harum aut consequuntur quibusdam et cumque
-                            odio rem
-                            quia fugit qui voluptatem totam!</p>
-                    </div><!--especialidades-box-->
-
-                    <div class="especialidades-box">
+                    <div class="serviços-box">
                         <i class='bx bxs-book-content'></i>
                         <h3>Ambulatório</h3>
-                        <p class="box">Lorem ipsum dolor sit amet. Sed omnis harum aut consequuntur quibusdam et cumque
-                            odio rem
-                            quia fugit qui voluptatem totam!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla rem dolore inventore delectus at.</p>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+
+                    <div class="serviços-box">
                         <i class='bx bxs-book-content'></i>
                         <h3>Pediatria</h3>
-                        <p class="box">Lorem ipsum dolor sit amet. Sed omnis harum aut consequuntur quibusdam et cumque
-                            odio rem
-                            quia fugit qui voluptatem totam!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla rem dolore inventore delectus at.</p>
                     </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+
+                    <div class="serviços-box">
                         <i class='bx bxs-book-content'></i>
                         <h3>Ortopedia</h3>
-                        <p class="box">Lorem ipsum dolor sit amet. Sed omnis harum aut consequuntur quibusdam et cumque
-                            odio rem
-                            quia fugit qui voluptatem totam!</p>
-                    </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla rem dolore inventore delectus at.</p>
+                    </div><!--serviços-box-->
+
+                    <div class="serviços-box">
                         <i class='bx bxs-book-content'></i>
-                        <h3>Cirurgia</h3>
-                        <p class="box">Lorem ipsum dolor sit amet. Sed omnis harum aut consequuntur quibusdam et cumque
-                            odio rem
-                            quia fugit qui voluptatem totam!</p>
-                    </div><!--especialidades-box-->
-                    <div class="especialidades-box">
+                        <h3>Ortopedia</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla rem dolore inventore delectus at.</p>
+                    </div><!--serviços-box-->
+                    
+                    <div class="serviços-box">
                         <i class='bx bxs-book-content'></i>
-                        <h3>Consulta Online</h3>
-                        <p class="box">Lorem ipsum dolor sit amet. Sed omnis harum aut consequuntur quibusdam et cumque
-                            odio rem
-                            quia fugit qui voluptatem totam!</p>
-                    </div><!--especialidades-box-->
-                </div> <!--flex-->
-            </div> <!--interface-->
-        </section> <!--Especialidades-->
+                        <h3>Ortopedia</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla rem dolore inventore delectus at.</p>
+                    </div><!--serviços-box-->
+
+                    <div class="serviços-box">
+                        <i class='bx bxs-book-content'></i>
+                        <h3>Ortopedia</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla rem dolore inventore delectus at.</p>
+                    </div><!--serviços-box-->
+
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--Serviços-->
 
 
         <section class="medicos">
@@ -194,7 +196,7 @@
 
 
         <section id="appointment">
-            <div class="container">
+            <div class="interface">
                 <div class="info">
                     <h2>Fale Conosco, queremos ouvir você!</h2>
                     <p>is a long established fact that a reader will be distracted by the readable content of a page</p>
@@ -241,12 +243,12 @@
 
                 <form action="https://formspree.io/f/mdoqyvod" method="POST">
                     <input type="text" name="Nome" id="nome" placeholder="Nome:" required>
-                    <input type="text" name="Seu email" id=" seu email" placeholder="SEU EMAIL:" required>
-                    <input type="text" name=" seu celular" id="seu celular" placeholder="SEU CELULAR:" required>
+                    <input type="text" name="Seu email" id=" seu email" placeholder="Email:" required>
+                    <input type="text" name=" seu celular" id="seu celular" placeholder="Celular:" required>
                     <select name="Departamento" id="departamento" required>
-                        <option value="Recepção">Atendimento da Recepção</option>
+                        <option value="Recepção">Resultados de Exames</option>
                         <option value="Médico">Atendimento Médico</option>
-                        <option value="Recepção">Exames</option>
+                        <option value="Recepção">Dúvidas</option>
                     </select>
                     <textarea name="mensagem" id="mensagem" placeholder="DIGITE AQUI SUA MENSAGEM" required></textarea>
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
@@ -278,7 +280,7 @@
 
                 <div class="box">
                     <img src="imagens/avatar2.jpg" alt="">
-                    <h3>Beatriz</h3>
+                    <h3>Leonardo</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -295,7 +297,7 @@
                 
                 <div class="box">
                     <img src="imagens/avatar3.jpg" alt="">
-                    <h3>Beatriz</h3>
+                    <h3>Paulo</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -312,7 +314,7 @@
 
                 <div class="box">
                     <img src="imagens/avatar4.jpg" alt="">
-                    <h3>Beatriz</h3>
+                    <h3>Maria</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -326,15 +328,13 @@
                         minima beatae tempore voluptatem! Blanditiis, voluptate fugiat.
                     </p>
                 </div>
-
-             
             </div><!--boxcontainer-->
 
         </section>
 
         
         <footer>
-            <div class="container">
+            <div class="container" id="cntt">
                 <article class="contact">
                     <div class="contact__items">
                         <i class='bx bx-phone'></i>
@@ -353,7 +353,7 @@
                 <article class="endereço">
                     <i class='bx bx-home'></i>
                     <a href="https://maps.app.goo.gl/Uj64vvt9o7tTn4SS7" target="_blank" style="text-decoration: none;">
-                        <h3>Av. Antônio Basílio, 3598 - Lagoa Nova, Natal - RNd</h3>
+                        <h3>Av. Antônio Basílio, 3598 - Lagoa Nova, Natal - RN</h3>
                     </a>
 
 
