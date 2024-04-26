@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!--Fontes//-->
+
+    <!--icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/2c9bccfd01.js" crossorigin="anonymous"></script>
+    <!--icons-->
+    <link rel="stylesheet" href="stylecadastro.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo-clinica.png" alt="Logo" style="width: 280px;">
+                </a>
+            </div><!--logo-->
+
+         
+
+            <div class="btn-contato">
+                <div class="btn-contato">
+                    <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank"><button><i class='bx bxl-whatsapp' class="imgwpp"></i>Agende sua
+                            consulta</button></a>
+                </div><!--butão consulta-->
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="Exames.html">Exames</a></li>
+                        <li><a href="Cadastro.html">Cadaste-se</a></li>
+                        <li><a href="#serv">Serviços</a></li>
+                        <li><a href="#cntt">Contatos</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank">Agende sua Consulta</a></li>
+                    </ul>
+                </nav>
+
+            </div> <!--menu-mobile-->
+
+            <div class="overlay-menu" id="overlay-menu"></div>
+
+
+
+        </div><!--interface-->
+    </header>
+    
+    <main>
+        <div class="container-form">
+            <h1>Bem vindo!</h1>
+            <p>Não tem uma conta? <a href="#">Cadastre-se aqui!</a></p>
+            <form action="#" method="POST" class="cadastro-form">
+                <input type="text" name="nome" placeholder="Nome completo" required>
+                <input type="text" name="endereco" placeholder="Endereço" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <input type="text" name="cpf" placeholder="CPF" required>
+                <input type="tel" name="telefone" placeholder="Telefone" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container" id="cntt">
+            <article class="contact">
+                <div class="contact__items">
+                    <i class='bx bx-phone'></i>
+                    <a href="tel:+558432323232" style="text-decoration: none;">
+                        <h3>32323232</h3>
+                    </a>
+                </div>
+                <div class="contact__items">
+                    <i class='bx bx-envelope'></i>
+                    <a href="mailto:Ouvidoria@Suaclinica.com" style="text-decoration: none;">
+                        <h3>ouvidoria@medonline.com</h3>
+                    </a>
+                </div>
+            </article>
+
+            <article class="endereço">
+                <i class='bx bx-home'></i>
+                <a href="https://maps.app.goo.gl/Uj64vvt9o7tTn4SS7" target="_blank" style="text-decoration: none;">
+                    <h3>Av. Antônio Basílio, 3598 - Lagoa Nova, Natal - RN</h3>
+                </a>
+
+
+            </article>
+
+            <article>
+                <div class="footer__socials">
+                    <a href="#" target="_blank"><i class='bx bxl-whatsapp'></i></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-youtube'></i></a>
+                    <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </article>
+
+        </div>
+        <div class="copyright">
+            <small>&copy; Copyright: 20224 por Hospital MedOnline. Todos os diretos reservados.
+        </div>
+    </footer> <!--footer-->
+
+</body>
+</html>
