@@ -510,7 +510,7 @@ footer {
             align-items: center;
             text-align: center;
             gap: 1rem;
-            padding-left: 135px;
+            padding-left: 220px;
         }
 
         .endereço i {
@@ -696,6 +696,7 @@ footer {
          .endereço{
            align-items: center;
             justify-content: center;
+            padding-right: 250px;
     
          }
          .footer__socials{
@@ -705,10 +706,7 @@ footer {
      }
    }
 
-
-
-}
-
+  }
 @media screen  and (max-width:400px){
    /* CLASSES GERAIS */
    .flex {
